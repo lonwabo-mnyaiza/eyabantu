@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <!--size of maps plug-in placed in style.css-->
+        <script src="https://maps.googleapis.com/maps/api/js"></script>
+        <script type="text/javascript">
+            function initialize() {
+                var map_canvas = document.getElementById('map_canvas');
+                var map_options = {
+                    center: new google.maps.LatLng(25.6700, 34.0090),
+                    zoom: 8,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                }
+                var map = new google.maps.Map(map_canvas, map_options)
+            }
+            google.maps.event.addDomListener(window, 'load', initialize);
+        </script>
+        
+
+        <!-- Le styles -->
+        <link rel="stylesheet" href="css/style.css" type="text/css"/>
+        <link rel="stylesheet" href="css/bootstrap.css" type="text/css"/>
+        <link rel="stylesheet" href="css/bootstrap-responsive.css" type="text/css"/>
+        <link rel="stylesheet" href="css/carousel.css" type="text/css"/>
+
+        <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+          <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
+        <title>Eya Bantu Contact</title>
+    </head>
+    <body>
+    <div class="navbar-wrapper">
+      <!-- Wrap the .navbar in .container to center it within the absolutely positioned parent. -->
+      <div class="container">
+
+        <div class="navbar navbar-inverse">
+          <div class="navbar-inner">
+            <!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="brand" href="home.html">Eya Bantu</a>
+            <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
+            <div class="nav-collapse collapse">
+              <ul class="nav">
+                <li><a href="home.php">Home</a></li>                
+                <!-- Read about Bootstrap dropdowns at http://twbs.github.com/bootstrap/javascript.html#dropdowns -->
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="about.php">About Us</a></li>
+                    <li><a href="overview.php">Overview</a></li>                    
+                    <li><a href="corporate-structure.php">Corporate Structure</a></li>
+                    <li><a href="equipment.php">Equipment</a></li>
+                    <li><a href="certificates.php">Certificates</a></li>                     
+                  </ul>
+                </li>                  
+                 <li class="dropdown" id="services">
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                         Services<span class="caret"></span>
+                     </a>
+                     <ul class="dropdown-menu">
+                         <li><a href="services.php">Our Services</a></li>
+                         <li><a href="all-services.php">Service Details</a></li>
+                         <li><a href="request-services.php">Request Services</a></li>
+                     </ul>
+                 </li>
+                 <li><a href="news.php">News</a></li>                            
+                <li class="active"><a href="contact.php">Contact</a></li>                
+                <li class="dropdown" id="sign-in">                    
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            <i class="icon-user icon-white"></i> Sign In
+                            <span class="caret"></span>
+                        </a>
+                        <div class="dropdown-menu" style="width: 250px">
+                            <div class="container">
+                            <form class="form-signin" role="form">        
+                                <input type="email" class="form-control" placeholder="Email address" required autofocus />
+                                <input type="password" class="form-control" placeholder="Password" required />
+                              <div class="checkbox">
+                                  <p><label>
+                                    <input type="checkbox" value="remember-me"> Remember me
+                                </label></p>
+                              </div>
+                              <button class="btn btn-primary" type="submit">Sign in</button>
+                            </form>
+                          </div>
+                            <p><label><a href="#">Forgot Password?</a></label></p>
+<!--                            <label><a href="register.html">Register</a></label>-->
+                        </div> 
+                </li> 
+                <li><a href="help.php">Help</a></li>
+                <li>
+                    <form style="padding-left:100px; padding-top: 4px;" class="navbar-search" action=" " id="searchform" method="get">
+                        <input type="text" class="search-query" id="search" name="search" placeholder="search..." autocomplete="off"/>
+                    </form>
+                </li>
+              </ul>
+            </div><!--/.nav-collapse -->
+          </div><!-- /.navbar-inner -->
+        </div><!-- /.navbar -->
+      </div> <!-- /.container -->
+    </div><!-- /.navbar-wrapper -->
+    
+    <!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1" class="myCarousel-target"></li>
+        <li data-target="#myCarousel" data-slide-to="2" class="myCarousel-target"></li>
+    </ol>
+      <div class="carousel-inner">
+          
+        <div id="0" class="item active">
+          <img class="carousel-color" src="img/slide-01.jpg" alt="">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Welcome</h1>
+              <p class="lead">
+                  Eya Bantu Your Partner In Power - Established in 1999,
+                  is a South African based premium consulting company.
+              </p>
+              <a class="btn btn-large btn-primary" href="about.html">Learn more &raquo;</a>
+            </div>
+          </div>
+        </div>
+          
+        <div id="1" class="item">
+          <img class="carousel-color" src="img/slide-02.jpg" alt="">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Subscribe</h1>
+              <p class="lead">Join us, subscribe to get the latest details about project, news, updates and many more.</p>
+              <a class="btn btn-large btn-primary" href="#">Subscribe &raquo;</a>
+            </div>
+          </div>
+        </div>
+          
+        <div id="2" class="item">
+          <img class="carousel-color" src="img/slide-03.jpg" alt="">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Services</h1>
+              <p class="lead">We offer world class services, view our range of services or request a service and experience our great range of services first hand.</p>
+              <a class="btn btn-large btn-primary" href="#">View Services &raquo;</a>
+            </div>
+          </div>
+        </div>
+          
+<!-- ===partially successful, map in carousel===
+<div id="3" class="item">          
+            <div class="container">
+                <div id="map"><iframe width="100%" height="800" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+                src="https://maps.google.co.th/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Debuz+Company+Limited+%E0%B8%96%E0%B8%99%E0%B8%99%E0%B8%99%E0%B8%A7%E0%B8%A1%E0%B8%B4%E0%B8%99%E0%B8%97%E0%B8%A3%E0%B9%8C+%E0%B9%80%E0%B8%82%E0%B8%95+%E0%B8%9A%E0%B8%B6%E0%B8%87%E0%B8%81%E0%B8%B8%E0%B9%88%E0%B8%A1+%E0%B8%9A%E0%B8%B6%E0%B8%87%E0%B8%81%E0%B8%B8%E0%B9%88%E0%B8%A1+%E0%B8%81%E0%B8%A3%E0%B8%B8%E0%B8%87%E0%B9%80%E0%B8%97%E0%B8%9E%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%99%E0%B8%84%E0%B8%A3&amp;aq=0&amp;oq=D&amp;sll=13.7246,100.633111&amp;sspn=0.799105,1.234589&amp;ie=UTF8&amp;hq=Debuz+Company+Limited+%E0%B8%96%E0%B8%99%E0%B8%99%E0%B8%99%E0%B8%A7%E0%B8%A1%E0%B8%B4%E0%B8%99%E0%B8%97%E0%B8%A3%E0%B9%8C+%E0%B9%80%E0%B8%82%E0%B8%95+%E0%B8%9A%E0%B8%B6%E0%B8%87%E0%B8%81%E0%B8%B8%E0%B9%88%E0%B8%A1+%E0%B8%9A%E0%B8%B6%E0%B8%87%E0%B8%81%E0%B8%B8%E0%B9%88%E0%B8%A1+%E0%B8%81%E0%B8%A3%E0%B8%B8%E0%B8%87%E0%B9%80%E0%B8%97%E0%B8%9E%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%99%E0%B8%84%E0%B8%A3&amp;t=m&amp;ll=13.798479,100.659506&amp;spn=0.021672,0.032015&amp;output=embed">
+     
+                </iframe></div>
+          </div>
+        </div>-->
+          
+          		
+
+      </div>
+        
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">&lsaquo;<span class="prev"></span></a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">&rsaquo;<span class="next"></span></a>
+      
+    </div><!-- /.carousel -->
+    
+    <div class="container marketing">
+        <!-- START THE FEATURETTES -->     
+
+      <div class="featurette">
+        <img class="featurette-image pull-right" src="../assets/img/examples/browser-icon-chrome.png">
+        <h2 class="featurette-heading">Please feel free to <span class="muted">contact us.</span></h2>
+        <p class="lead"></p>
+        <div class="well" style="float: right;">
+            <!--<h2 class="h2">Contact Info</h2>-->
+            <h3 class="h3">Our Address:</h3>
+            <p>
+                
+            </p>
+            <h3 class="h3">Email:</h3>
+            <p>
+                
+            </p>
+            <h3 class="h3">Contact Details:</h3>
+            <p>
+                <label>Mike Brown - Consulting</label>
+                <label>Tel: +27 (43) 726 2726</label>
+                <label>Mobile: +27 82 371 2963</label>
+            </p>
+            <p>
+                <label>Jeff Richter - Emergency Services</label>
+                <label>Tel: +27 (43) 726 2726</label>
+                <label>Mobile: +27 83 294 4353</label>
+            </p>
+        </div>
+        
+<!--        <div>
+            <h2 class="h2">Our Location</h2>-->
+            <div id="map_canvas" class="span4"></div>
+<!--        </div>-->
+        
+        <div class="span2">
+<!--            <h2 class="h2">Contact Us</h2>-->
+        <form action="#" method="post">
+                        <div class="form">
+                        <label for="name">Name</label>
+                        <input class="text" name="name" id="name" type="text" />
+                        <div class="clear2"></div>
+
+                        <label for="email">Email</label>
+                        <input class="text" name="email" id="email" type="text" />
+                        <div class="clear2"></div>
+
+                         <label for="website">Subject</label>
+                        <input class="text" name="website" id="website" type="text" />
+                        <div class="clear2"></div>
+
+                        <label for="message">Message</label>
+                        <textarea class="text" name="comment" id="message" cols="45" rows="5"></textarea>
+                        <div class="clear2"></div>
+
+                        <input class="button btn-info" name="Reset" type="button" value="Clear" />
+                        <input class="button btn-primary" name="Submit" type="button" value="Post" />                        
+                        </div>
+                    </form> 
+        </div>
+      </div>
+     <hr class="featurette-divider">
+     </div>
+    
+        <!-- FOOTER -->
+      <footer class="footer">        
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <br/>
+        <br/>
+        <p class="pull-right">
+            <a target="_blank" href="https://www.facebook.com/EyaBantu"><img src="img/facebook.jpg"/></a>
+            <a target="_blank" href="#"><img src="img/twitter.jpg"/></a>
+        </p>
+        <p>Eya Bantu - Consulting Engineers and Professional Services.
+        <br/>
+        www.eyabantu.com &copy; All Rights Reserved 
+        <br />         
+        <a href="#">Privacy</a>
+        &middot; 
+        <a href="#">Terms</a></p>
+      </footer> 
+        
+        <script src="js/jquery.js"></script>
+        <script src="js/bootstrap-transition.js"></script>
+        <script src="js/bootstrap-alert.js"></script>
+        <script src="js/bootstrap-modal.js"></script>
+        <script src="js/bootstrap-dropdown.js"></script>
+        <script src="js/bootstrap-scrollspy.js"></script>
+        <script src="js/bootstrap-tab.js"></script>
+        <script src="js/bootstrap-tooltip.js"></script>
+        <script src="js/bootstrap-popover.js"></script>
+        <script src="js/bootstrap-button.js"></script>
+        <script src="js/bootstrap-collapse.js"></script>
+        <script src="js/bootstrap-carousel.js"></script>
+        <script src="js/bootstrap-typeahead.js"></script>
+        <script src="js/jquery-1.7.1.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script>
+          !function ($) {
+            $(function(){
+              // carousel demo
+              $('#myCarousel').carousel()          
+            })
+          }(window.jQuery);
+        </script>
+        <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-53796954-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+        <script src="js/holder.js"></script>
+
+        <!-- ===carousel map failed implementation===
+
+            <script type="text/javascript">
+		$(document).ready(function(){
+			//Map
+				if($('#map').length > 0){
+			
+					function load(){
+					
+						var point = new google.maps.LatLng(52.300474,-2.073454);
+						
+						if($.browser.msie){
+							var grayStyles = [];
+						} else {
+							var grayStyles = [
+								{
+									stylers: [
+										{saturation: -100},
+										{gamma:0.91},
+										{lightness: 6}
+									]
+								},
+							];
+						}
+					
+						var myMapOptions = {
+								zoom: 15,
+								center: point,
+								mapTypeId: google.maps.MapTypeId.ROADMAP,
+								styles: grayStyles,
+								draggable: false,
+								scrollwheel: false
+						};
+					
+						var map = new google.maps.Map(document.getElementById("map"),myMapOptions);
+					
+						var image = new google.maps.MarkerImage(
+								'http://www.superdream.co.uk/wp-content/themes/superdream/img/map/image-tm.png',
+								new google.maps.Size(184,62),
+								new google.maps.Point(0,0),
+								new google.maps.Point(92,62)
+						);
+					
+						var shadow = new google.maps.MarkerImage(
+								'http://www.superdream.co.uk/wp-content/themes/superdream/img/map/shadow.png',
+								new google.maps.Size(218,62),
+								new google.maps.Point(0,0),
+								new google.maps.Point(92,62)
+						);
+					
+						var shape = {
+								coord: [180,0,182,1,183,2,183,3,183,4,183,5,183,6,183,7,183,8,183,9,183,10,183,11,183,12,183,13,183,14,183,15,183,16,183,17,183,18,183,19,183,20,183,21,183,22,183,23,183,24,183,25,183,26,183,27,183,28,183,29,183,30,183,31,183,32,183,33,183,34,183,35,183,36,183,37,183,38,183,39,183,40,183,41,183,42,183,43,183,44,183,45,183,46,183,47,183,48,183,49,183,50,183,51,182,52,106,53,105,54,104,55,103,56,102,57,101,58,100,59,99,60,98,61,91,61,90,60,89,59,88,58,87,57,86,56,85,55,84,54,82,53,4,52,2,51,2,50,1,49,1,48,1,47,1,46,1,45,1,44,1,43,1,42,1,41,1,40,1,39,1,38,1,37,1,36,1,35,1,34,1,33,1,32,1,31,1,30,1,29,1,28,1,27,1,26,1,25,1,24,1,23,1,22,1,21,1,20,1,19,1,18,1,17,1,16,1,15,1,14,1,13,1,12,1,11,1,10,1,9,1,8,1,7,1,6,1,5,1,4,2,3,2,2,3,1,6,0,180,0],
+								type: 'poly'
+						};
+					
+						var marker = new google.maps.Marker({
+							draggable: false,
+							raiseOnDrag: false,
+							icon: image,
+							shadow: shadow,
+							shape: shape,
+							map: map,
+							position: point
+						});
+					  
+						var dragFlag = false;
+						var start = 0, end = 0;
+						
+						function thisTouchStart(e)
+						{
+							dragFlag = true;
+							start = e.touches[0].pageY; 
+						}
+						
+						function thisTouchEnd()
+						{
+						    dragFlag = false;
+						}
+						
+						function thisTouchMove(e)
+						{
+						    if ( !dragFlag ) return;
+						    end = e.touches[0].pageY;
+						    window.scrollBy( 0,( start - end ) );
+						}
+						
+						var mapElement = document.getElementById("map");
+						
+						if (!mapElement.addEventListener) {
+							mapElement.attachEvent("touchstart", thisTouchStart);
+						} else {
+							mapElement.addEventListener("touchstart", thisTouchStart, true);
+						}
+						
+						if (!mapElement.addEventListener) {
+						    mapElement.attachEvent("touchend", thisTouchEnd);
+						} else {
+						    mapElement.addEventListener("touchend", thisTouchEnd, true);
+						}
+						
+						if (!mapElement.addEventListener) {
+							mapElement.attachEvent("touchmove", thisTouchMove);
+						} else {
+							mapElement.addEventListener("touchmove", thisTouchMove, true);
+						}
+					}
+					
+					load();
+				
+				} //#IF MAP
+			
+			//#Map
+		});
+	</script>-->
+    </body>
+</html>
